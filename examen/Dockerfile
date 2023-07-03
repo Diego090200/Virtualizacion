@@ -1,12 +1,16 @@
-FROM python:3.10.6
+# Imagen base de Python
+FROM python:3.9
 
+# Directorio de trabajo en el contenedor
 WORKDIR /app
 
-COPY requirements.txt .
+# Copiar los archivos necesarios al contenedor
+COPY requirements.txt ./
+
+# Instalar las dependencias
 RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 5000
-
-CMD ["python3", "-m", "flask", "run"]
+# Comando para ejecutar la aplicación Flask
+CMD ["python", "app.py","--host=0.0.0.0"]
