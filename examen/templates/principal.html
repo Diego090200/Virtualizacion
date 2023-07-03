@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estudiantes y Catedráticos</title>
+</head>
+<body>
+    <h1>Listado de Estudiantes</h1>
+    <ul>
+    {% for estudiante in estudiantes %}
+        <li>{{ estudiante }}</li>
+    {% endfor %}
+    </ul>
+
+    <h1>Listado de Catedráticos</h1>
+    <ul>
+    {% for catedratico in catedraticos %}
+        <li>{{ catedratico }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
